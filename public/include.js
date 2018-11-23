@@ -20,7 +20,7 @@ function plugin_wf_ajax(){
      * Loading gif.
      */
     if(document.getElementById(id)){
-      document.getElementById(id).innerHTML='<img style="margin:10px;" src="/plugin/wf/ajax/loading.gif">';
+      document.getElementById(id).innerHTML='<img style="margin:10px;margin:0px" src="/plugin/wf/ajax/loading.gif">';
     }
     /**
      * Ajax request.

@@ -1,8 +1,12 @@
 version: '1.0'
 history:
   '1.0':
-    description: 'First version.'
-plugin: {  }
+    date: '2019-04-30'
+    description: 'Manifest created.'
+plugin:
+  -
+    name: include/js
+    version: '1.0'
 sys:
   -
     name: mercury
@@ -10,7 +14,7 @@ sys:
       - '1.0'
 php:
   - '7.2'
-author: null
+author: Claes Östlund
 links:
-  - 'https://github.com'
 description: ''
+third_part_software:

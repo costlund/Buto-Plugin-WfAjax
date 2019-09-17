@@ -1,5 +1,8 @@
-version: '1.0'
+version: '1.1'
 history:
+  '1.1':
+    date: '2019-09-17'
+    description: 'Replace loading.gif with apng.png (counter 1-10).'
   '1.0':
     date: '2019-04-30'
     description: 'Manifest created.'

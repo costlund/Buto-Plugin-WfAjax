@@ -20,7 +20,7 @@ function plugin_wf_ajax(){
      * Loading gif.
      */
     if(document.getElementById(id)){
-      document.getElementById(id).innerHTML='<img style="margin:10px;margin:0px;width:16px;border:solid 1px silver;border-radius: 5px;" src="/plugin/wf/ajax/apng.png?_time='+time+'">';
+      document.getElementById(id).innerHTML='<img style="margin:10px;margin:0px;width:16px;border:solid 1px silver;border-radius: 5px;" src="/plugin/wf/ajax/apng2.png?_time='+time+'">';
     }
     /**
      * Ajax request.

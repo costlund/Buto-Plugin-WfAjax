@@ -1,5 +1,8 @@
-version: '1.1'
+version: '1.2'
 history:
+  '1.2':
+    date: '2019-09-24'
+    description: 'Replace apng.png with apng2.png (counter 1-20 with background movement).'
   '1.1':
     date: '2019-09-17'
     description: 'Replace loading.gif with apng.png (counter 1-10).'

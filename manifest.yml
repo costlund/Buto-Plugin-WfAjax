@@ -1,13 +1,20 @@
-version: '1.2'
+version: '1.3.0'
 history:
-  '1.2':
+  '1.3.0':
+    date: '2019-11-25'
+    title: Error handling
+    description: 'Capture error on get request.'
+  '1.2.0':
     date: '2019-09-24'
+    title: Loading icon
     description: 'Replace apng.png with apng2.png (counter 1-20 with background movement).'
-  '1.1':
+  '1.1.0':
     date: '2019-09-17'
+    title: Loading icon
     description: 'Replace loading.gif with apng.png (counter 1-10).'
-  '1.0':
+  '1.0.0':
     date: '2019-04-30'
+    title: Manifest
     description: 'Manifest created.'
 plugin:
   -

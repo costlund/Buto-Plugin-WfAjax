@@ -25,18 +25,21 @@ function plugin_wf_ajax(){
     /**
      * Ajax request.
      */
-    $.get(url, function(data){
-      var element = document.getElementById(id);
-      if(!element){
-        console.log('PluginWfAjax says: Could not find element with id '+id+'!');
-      }else{
+    var element = document.getElementById(id);
+    if(!element){
+      console.log('PluginWfAjax says: Could not find element with id '+id+'!');
+    }else{
+      $.get(url, function(data){
+      }).done(function(data){
         element.innerHTML = data;
         var scripts = element.getElementsByTagName('script');
         for (var i=0;i<scripts.length;i++) {
           eval(scripts[i].innerHTML);
         }
-      }
-    });    
+      }).fail(function(x, y, z){
+        alert("PluginWfAjax says: Error requesting page " + url + " ("+x.responseText+")");
+      });
+    }
   }
   /**
    * Update an element.

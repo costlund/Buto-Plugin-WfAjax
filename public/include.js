@@ -36,8 +36,6 @@ function plugin_wf_ajax(){
         for (var i=0;i<scripts.length;i++) {
           eval(scripts[i].innerHTML);
         }
-      }).fail(function(x, y, z){
-        alert("PluginWfAjax says: Error requesting page " + url + " ("+x.responseText+")");
       });
     }
   }

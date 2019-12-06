@@ -36,6 +36,17 @@ function plugin_wf_ajax(){
         for (var i=0;i<scripts.length;i++) {
           eval(scripts[i].innerHTML);
         }
+        /**
+         * Alert some error.
+         */
+        if(element.getAttribute('data-wf-ajax-error')==element.innerHTML){
+          element.innerHTML='';
+          if(element.getAttribute('data-wf-ajax-error-message')){
+            alert(element.getAttribute('data-wf-ajax-error-message'));  
+          }else{
+            alert('PluginWfAjax says: Attribute data-wf-ajax-error has match but the message is not set!');
+          }
+        }
       });
     }
   }

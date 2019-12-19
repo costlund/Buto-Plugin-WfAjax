@@ -6,7 +6,20 @@ function plugin_wf_ajax(){
    * @param {type} url
    * @returns {undefined}
    */
+  this.url_trim = function(url){
+    /**
+     * Remove / at the end of url to handle some browsers who loading it twice.
+     */
+    if(url.substr(url.length-1)==='/'){
+      url = url.substr(0, url.length-1);
+    }
+    return url;
+  }
   this.load = function (id, url){
+    /**
+     * 
+     */
+    url = this.url_trim(url);
     /**
      * Set element in array.
      */

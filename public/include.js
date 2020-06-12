@@ -38,24 +38,24 @@ function plugin_wf_ajax(){
     /**
      * Ajax request.
      */
-    var element = document.getElementById(id);
-    if(!element){
+    var _element = document.getElementById(id);
+    if(!_element){
       console.log('PluginWfAjax says: Could not find element with id '+id+'!');
     }else{
       $.get(url, function(data){
       }).done(function(data){
-        element.innerHTML = data;
-        var scripts = element.getElementsByTagName('script');
+        _element.innerHTML = data;
+        var scripts = _element.getElementsByTagName('script');
         for (var i=0;i<scripts.length;i++) {
           eval(scripts[i].innerHTML);
         }
         /**
          * Alert some error.
          */
-        if(element.getAttribute('data-wf-ajax-error')==element.innerHTML){
-          element.innerHTML='';
-          if(element.getAttribute('data-wf-ajax-error-message')){
-            alert(element.getAttribute('data-wf-ajax-error-message'));  
+        if(_element.getAttribute('data-wf-ajax-error')==_element.innerHTML){
+          _element.innerHTML='';
+          if(_element.getAttribute('data-wf-ajax-error-message')){
+            alert(_element.getAttribute('data-wf-ajax-error-message'));  
           }else{
             alert('PluginWfAjax says: Attribute data-wf-ajax-error has match but the message is not set!');
           }

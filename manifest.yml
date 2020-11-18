@@ -1,33 +1,33 @@
-version: '1.4.1'
+version: 1.4.1
 history:
-  '1.4.1':
+  1.4.1:
     date: '2020-06-12'
-    title: Rename variable
-    description: Rename variable to avoid conflict in eval scripts.
-  '1.4.0':
+    title: 'Rename variable'
+    description: 'Rename variable to avoid conflict in eval scripts.'
+  1.4.0:
     date: '2019-12-19'
-    title: Loading twice
-    description: Remove / at the end of url to handle some browsers who loading it twice.
-  '1.3.0':
+    title: 'Loading twice'
+    description: 'Remove / at the end of url to handle some browsers who loading it twice.'
+  1.3.0:
     date: '2019-12-06'
-    title: Match error
-    description: Handle content match error.
-  '1.2.0':
+    title: 'Match error'
+    description: 'Handle content match error.'
+  1.2.0:
     date: '2019-09-24'
-    title: Loading icon
+    title: 'Loading icon'
     description: 'Replace apng.png with apng2.png (counter 1-20 with background movement).'
-  '1.1.0':
+  1.1.0:
     date: '2019-09-17'
-    title: Loading icon
+    title: 'Loading icon'
     description: 'Replace loading.gif with apng.png (counter 1-10).'
-  '1.0.0':
+  1.0.0:
     date: '2019-04-30'
     title: Manifest
     description: 'Manifest created.'
 plugin:
   -
     name: include/js
-    version: '1.0'
+    version: 1.1.0
 sys:
   -
     name: mercury
@@ -35,7 +35,7 @@ sys:
       - '1.0'
 php:
   - '7.2'
-author: Claes Östlund
-links:
+author: 'Claes Östlund'
+links: null
 description: ''
-third_part_software:
+third_part_software: null

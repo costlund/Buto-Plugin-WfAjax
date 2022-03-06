@@ -71,6 +71,8 @@ function plugin_wf_ajax(){
   this.update = function(id){
     if(this.elements[id]){
       this.load(id, this.elements[id]);
+    }else{
+      console.log('PluginWfAjax.update says: Could not find data elements['+id+']!');
     }
   }
   /**

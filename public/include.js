@@ -1,5 +1,6 @@
 function plugin_wf_ajax(){
   this.elements = new Array();
+  this.load_element = [{type: 'img', attribute: {style: 'margin:10px;margin:0px;width:16px;border:solid 1px silver;border-radius: 5px;', src: '/plugin/wf/ajax/apng2.png'}}];
   /**
    * Load to element.
    * @param {type} id
@@ -33,7 +34,11 @@ function plugin_wf_ajax(){
      * Loading gif.
      */
     if(document.getElementById(id)){
-      document.getElementById(id).innerHTML='<img style="margin:10px;margin:0px;width:16px;border:solid 1px silver;border-radius: 5px;" src="/plugin/wf/ajax/apng2.png?_time='+time+'">';
+      if(false){
+        document.getElementById(id).innerHTML='<img style="margin:10px;margin:0px;width:16px;border:solid 1px silver;border-radius: 5px;" src="/plugin/wf/ajax/apng2.png?_time='+time+'">';
+      }else{
+        PluginWfDom.render(this.load_element, document.getElementById(id));
+      }
     }
     /**
      * Ajax request.

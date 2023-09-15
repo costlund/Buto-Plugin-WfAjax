@@ -1,6 +1,7 @@
 function plugin_wf_ajax(){
   this.elements = new Array();
   this.load_element = [{type: 'img', attribute: {style: 'margin:10px;margin:0px;width:16px;border:solid 1px silver;border-radius: 5px;', src: '/plugin/wf/ajax/apng2.png'}}];
+  this.loading = [];
   /**
    * Load to element.
    * @param {type} id
@@ -25,6 +26,7 @@ function plugin_wf_ajax(){
      * Set element in array.
      */
     this.elements[id] = url;
+    this.loading[id] = url;
     /**
      * Handle url.
      */
@@ -37,7 +39,9 @@ function plugin_wf_ajax(){
       if(false){
         document.getElementById(id).innerHTML='<img style="margin:10px;margin:0px;width:16px;border:solid 1px silver;border-radius: 5px;" src="/plugin/wf/ajax/apng2.png?_time='+time+'">';
       }else{
-        PluginWfDom.render(this.load_element, document.getElementById(id));
+        PluginBootstrapToast.toast({
+          id: 'plugin_wf_ajax_toast', header: 'Loading content', body: this.load_element, autohide: false
+        });
       }
     }
     /**
@@ -64,6 +68,14 @@ function plugin_wf_ajax(){
           }else{
             alert('PluginWfAjax says: Attribute data-wf-ajax-error has match but the message is not set!');
           }
+        }
+        /**
+         * loading
+         */
+        delete PluginWfAjax.loading[id];
+        if(PluginWfAjax.loading.length==0){
+          $('#plugin_wf_ajax_toast').toast('hide');
+        }else{
         }
       });
     }

@@ -1,5 +1,9 @@
-version: 1.5.0
+version: 1.5.1
 history:
+  1.5.1:
+    date: '2023-09-15'
+    title: 'Toast'
+    description: 'Add a Toast and put the loading indicator in Toast body.'
   1.5.0:
     date: '2023-09-13'
     title: 'Load indicator'

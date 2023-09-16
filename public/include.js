@@ -25,6 +25,10 @@ function plugin_wf_ajax(){
     /**
      * Set element in array.
      */
+    var first_load = true;
+    if(this.elements[id]){
+      first_load = false;
+    }
     this.elements[id] = url;
     this.loading[id] = url;
     /**
@@ -39,6 +43,15 @@ function plugin_wf_ajax(){
       if(!document.getElementById('PluginTwitterBootstrap530v')){
         PluginWfDom.render(this.load_element, document.getElementById(id));
       }else{
+        /**
+         * 
+         */
+        if(first_load){
+          PluginWfDom.render(this.load_element, document.getElementById(id));
+        }
+        /**
+         * 
+         */
         PluginBootstrapToast.toast({
           id: 'plugin_wf_ajax_toast', header: 'Loading content', body: this.load_element, autohide: false
         });

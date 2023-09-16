@@ -1,5 +1,9 @@
-version: 1.5.2
+version: 1.5.3
 history:
+  1.5.3:
+    date: '2023-09-16'
+    title: 'Toast'
+    description: 'Load indicator in div along with toast on first load.'
   1.5.2:
     date: '2023-09-16'
     title: 'Toast'

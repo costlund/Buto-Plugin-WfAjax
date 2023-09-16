@@ -1,5 +1,9 @@
-version: 1.5.1
+version: 1.5.2
 history:
+  1.5.2:
+    date: '2023-09-16'
+    title: 'Toast'
+    description: 'Load indicator in div instead of show a toast if Bootstrap version not 5.'
   1.5.1:
     date: '2023-09-15'
     title: 'Toast'

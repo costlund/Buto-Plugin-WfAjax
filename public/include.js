@@ -36,8 +36,8 @@ function plugin_wf_ajax(){
      * Loading gif.
      */
     if(document.getElementById(id)){
-      if(false){
-        document.getElementById(id).innerHTML='<img style="margin:10px;margin:0px;width:16px;border:solid 1px silver;border-radius: 5px;" src="/plugin/wf/ajax/apng2.png?_time='+time+'">';
+      if(!document.getElementById('PluginTwitterBootstrap530v')){
+        PluginWfDom.render(this.load_element, document.getElementById(id));
       }else{
         PluginBootstrapToast.toast({
           id: 'plugin_wf_ajax_toast', header: 'Loading content', body: this.load_element, autohide: false

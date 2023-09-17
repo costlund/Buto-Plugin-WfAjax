@@ -1,6 +1,7 @@
 function plugin_wf_ajax(){
   this.elements = new Array();
-  this.load_element = [{type: 'img', attribute: {style: 'margin:10px;margin:0px;width:16px;border:solid 1px silver;border-radius: 5px;', src: '/plugin/wf/ajax/apng2.png'}}];
+  this.load_div_img = [{type: 'img', attribute: {id: 'plugin_wf_ajax_div_img', style: 'margin:10px;margin:0px;width:16px;border:solid 1px silver;border-radius: 5px;', src: '/plugin/wf/ajax/apng2.png'}}];
+  this.load_toast_img = [{type: 'img', attribute: {id: 'plugin_wf_ajax_toast_img', style: 'margin:10px;margin:0px;width:16px;border:solid 1px silver;border-radius: 5px;', src: '/plugin/wf/ajax/apng2.png'}}];
   this.loading = [];
   /**
    * Load to element.
@@ -41,20 +42,21 @@ function plugin_wf_ajax(){
      */
     if(document.getElementById(id)){
       if(!document.getElementById('PluginTwitterBootstrap530v')){
-        PluginWfDom.render(this.load_element, document.getElementById(id));
+        PluginWfDom.render(this.load_div_img, document.getElementById(id));
       }else{
         /**
          * 
          */
         if(first_load){
-          PluginWfDom.render(this.load_element, document.getElementById(id));
+          PluginWfDom.render(this.load_div_img, document.getElementById(id));
         }
         /**
          * 
          */
         PluginBootstrapToast.toast({
-          id: 'plugin_wf_ajax_toast', header: 'Loading content', body: this.load_element, autohide: false
+          id: 'plugin_wf_ajax_toast', header: 'Loading content', body: this.load_toast_img, autohide: false
         });
+        document.getElementById('plugin_wf_ajax_toast_img').src = document.getElementById('plugin_wf_ajax_toast_img').getAttribute('src');
       }
     }
     /**

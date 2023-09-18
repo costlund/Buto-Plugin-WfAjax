@@ -1,5 +1,9 @@
-version: 1.5.4
+version: 1.5.5
 history:
+  1.5.5:
+    date: '2023-09-18'
+    title: 'Toast'
+    description: 'Add span along with indicatior. Span innerHTML can be set if div has attribute data-content set.'
   1.5.4:
     date: '2023-09-17'
     title: 'Indicator'

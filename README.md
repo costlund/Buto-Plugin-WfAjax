@@ -39,5 +39,6 @@ attribute:
   id: _my_div_id_
   data-wf-ajax-error: Role issue...
   data-wf-ajax-error-message: There was a role issue on this request!
+  data-content: My div name
 innerHTML: 
 ```

@@ -1,7 +1,10 @@
 function plugin_wf_ajax(){
   this.elements = new Array();
   this.load_div_img = [{type: 'img', attribute: {id: 'plugin_wf_ajax_div_img', style: 'margin:10px;margin:0px;width:16px;border:solid 1px silver;border-radius: 5px;', src: '/plugin/wf/ajax/apng2.png'}}];
-  this.load_toast_img = [{type: 'img', attribute: {id: 'plugin_wf_ajax_toast_img', style: 'margin:10px;margin:0px;width:16px;border:solid 1px silver;border-radius: 5px;', src: '/plugin/wf/ajax/apng2.png'}}];
+  this.load_toast_img = [
+    {type: 'img', attribute: {id: 'plugin_wf_ajax_toast_img', style: 'margin-right:10px;width:16px;border:solid 1px silver;border-radius: 5px;', src: '/plugin/wf/ajax/apng2.png'}},
+    {type: 'span', attribute: {id: 'plugin_wf_ajax_toast_span'}, 'innerHTML': ''}
+  ];
   this.loading = [];
   /**
    * Load to element.
@@ -57,6 +60,7 @@ function plugin_wf_ajax(){
           id: 'plugin_wf_ajax_toast', header: 'Loading content', body: this.load_toast_img, autohide: false
         });
         document.getElementById('plugin_wf_ajax_toast_img').src = document.getElementById('plugin_wf_ajax_toast_img').getAttribute('src');
+        document.getElementById('plugin_wf_ajax_toast_span').innerHTML = document.getElementById(id).getAttribute('data-content');
       }
     }
     /**

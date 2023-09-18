@@ -70,9 +70,11 @@ function plugin_wf_ajax(){
     if(!_element){
       console.log('PluginWfAjax says: Could not find element with id '+id+'!');
     }else{
+      _element.style.visibility = 'hidden';
       $.get(url, function(data){
       }).done(function(data){
         _element.innerHTML = data;
+        _element.style.visibility = 'visible';
         var scripts = _element.getElementsByTagName('script');
         for (var i=0;i<scripts.length;i++) {
           eval(scripts[i].innerHTML);

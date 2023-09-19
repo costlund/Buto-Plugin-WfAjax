@@ -70,7 +70,9 @@ function plugin_wf_ajax(){
     if(!_element){
       console.log('PluginWfAjax says: Could not find element with id '+id+'!');
     }else{
-      _element.style.visibility = 'hidden';
+      if(!first_load){
+        _element.style.visibility = 'hidden';
+      }
       $.get(url, function(data){
       }).done(function(data){
         _element.innerHTML = data;

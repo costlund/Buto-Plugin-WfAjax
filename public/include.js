@@ -50,8 +50,12 @@ function plugin_wf_ajax(){
         /**
          * toast
          */
+        var header = 'Loading content';
+        if(document.getElementById('i18n_wf_ajax_loading_content')){
+          header = document.getElementById('i18n_wf_ajax_loading_content').innerText;
+        }
         PluginBootstrapToast.toast({
-          id: 'plugin_wf_ajax_toast', header: 'Loading content', body: this.load_toast_img, autohide: false
+          id: 'plugin_wf_ajax_toast', header: header, body: this.load_toast_img, autohide: false
         });
         document.getElementById('plugin_wf_ajax_toast_img').src = document.getElementById('plugin_wf_ajax_toast_img').getAttribute('src');
         document.getElementById('plugin_wf_ajax_toast_span').innerHTML = document.getElementById(id).getAttribute('data-content');

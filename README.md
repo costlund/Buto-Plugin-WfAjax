@@ -10,6 +10,15 @@ data:
   method: include
 ```
 
+## I18N
+Add not visible element at the botton on loading page.
+```
+type: widget
+data:
+  plugin: wf/ajax
+  method: i18n
+```
+
 ## Javascript
 Javascript to make request to element and post form to element. It also include an updater function for all requests to element.
 

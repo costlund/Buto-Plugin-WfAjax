@@ -1,5 +1,9 @@
-version: 1.5.8
+version: 1.6.0
 history:
+  1.6.0:
+    date: '2023-09-19'
+    title: 'I18N'
+    description: 'Add widget i18n to be able to pic up translations via javascript.'
   1.5.8:
     date: '2023-09-19'
     title: 'Indicator'

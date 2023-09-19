@@ -48,13 +48,7 @@ function plugin_wf_ajax(){
         PluginWfDom.render(this.load_div_img, document.getElementById(id));
       }else{
         /**
-         * 
-         */
-        if(first_load){
-          PluginWfDom.render(this.load_div_img, document.getElementById(id));
-        }
-        /**
-         * 
+         * toast
          */
         PluginBootstrapToast.toast({
           id: 'plugin_wf_ajax_toast', header: 'Loading content', body: this.load_toast_img, autohide: false
@@ -70,9 +64,28 @@ function plugin_wf_ajax(){
     if(!_element){
       console.log('PluginWfAjax says: Could not find element with id '+id+'!');
     }else{
-      if(!first_load){
+      /**
+       * div before request
+       */
+      if(first_load){
+        /**
+         * First load, add indicator.
+         */
+        PluginWfDom.render(this.load_div_img, document.getElementById(id));
+      }else if(!first_load && document.getElementById(id).innerHTML.length==0){
+        /**
+         * Not first load and div is empty, load indicator.
+         */
+        PluginWfDom.render(this.load_div_img, document.getElementById(id));
+      }else if(!first_load){
+        /**
+         * Not first load, load indicator.
+         */
         _element.style.visibility = 'hidden';
       }
+      /**
+       * ajax request
+       */
       $.get(url, function(data){
       }).done(function(data){
         _element.innerHTML = data;

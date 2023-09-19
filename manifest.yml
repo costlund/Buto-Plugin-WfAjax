@@ -1,5 +1,9 @@
-version: 1.5.7
+version: 1.5.8
 history:
+  1.5.8:
+    date: '2023-09-19'
+    title: 'Indicator'
+    description: 'Show indicator in loading div if first load or if div is empty.'
   1.5.7:
     date: '2023-09-19'
     title: 'Loading div'

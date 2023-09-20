@@ -48,12 +48,19 @@ function plugin_wf_ajax(){
         PluginWfDom.render(this.load_div_img, document.getElementById(id));
       }else{
         /**
+         * remove, if exist.
+         */
+        $('#plugin_wf_ajax_toast').remove();
+        /**
          * toast
          */
         var header = 'Loading content';
         if(document.getElementById('i18n_wf_ajax_loading_content')){
           header = document.getElementById('i18n_wf_ajax_loading_content').innerText;
         }
+        /**
+         * 
+         */
         PluginBootstrapToast.toast({
           id: 'plugin_wf_ajax_toast', header: header, body: this.load_toast_img, autohide: false
         });

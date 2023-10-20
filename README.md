@@ -12,6 +12,17 @@ data:
   method: include
 ```
 
+#### Data
+```
+  data:
+```
+
+##### Loading content
+Loading toast is shown by default but could be shut down.
+```
+    loading_content: false
+```
+
 ### I18N
 Include element in body section (optional) for translation purpose.
 

@@ -1,5 +1,9 @@
-version: 1.6.2
+version: 1.6.3
 history:
+  1.6.3:
+    date: '2023-10-20'
+    title: Loading content
+    description: 'Turn off Loading content toast via data parameter.'
   1.6.2:
     date: '2023-09-20'
     title: 'Toast'

@@ -1,5 +1,9 @@
-version: 1.6.3
+version: 1.6.4
 history:
+  1.6.4:
+    date: '2024-03-18'
+    title: I18N
+    description: 'Add I18N in json object. Remove widget i18n.'
   1.6.3:
     date: '2023-10-20'
     title: Loading content
@@ -84,6 +88,9 @@ plugin:
   -
     name: include/js
     version: 1.2.0
+  -
+    name: i18n/translate_to_json
+    version: 1.0.0
 sys:
   -
     name: mercury
